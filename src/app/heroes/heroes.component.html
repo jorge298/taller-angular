@@ -1,0 +1,5 @@
+<p>¡ha nacido un heroe!</p>
+<div *ngIf="activado">Soy un div activo</div>
+<div *ngIf="desactivado">Soy un div inactvo</div> <!-- la directiva oculta el div-->
+<div *ngFor="let heroe of heroes">{{heroe}}</div>
+<div *ngFor="let heroe of heroes_list">{{heroe.name}}</div>

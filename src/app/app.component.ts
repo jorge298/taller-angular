@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'data-binding';
+  title = 'título de la página';
+
+  capitalizar(): void{
+    this.title = this.title.charAt(0).toUpperCase()+this.title.slice(1).toLocaleLowerCase();
+  }
 }
