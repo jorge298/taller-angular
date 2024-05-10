@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './heroes.component';
 import { AddHeroComponent } from './add-hero/add-hero.component';
-
+import { HttpRequestService } from '../services/http-request.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,11 +14,15 @@ import { AddHeroComponent } from './add-hero/add-hero.component';
   ],
   imports: [
     CommonModule,
-    FormsModule 
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     HeroesComponent,
     AddHeroComponent
+  ],
+  providers: [
+    HttpRequestService
   ]
 })
 export class HeroesModule { }
